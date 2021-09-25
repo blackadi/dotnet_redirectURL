@@ -49,7 +49,10 @@ namespace WebApp_OpenIDConnect_DotNet
                     if (Configuration["AzureAd:WebAppURI"] != null)
                     {
                         context.ProtocolMessage.RedirectUri = Configuration["AzureAd:WebAppURI"] + Configuration["AzureAd:CallbackPath"];
+                        System.Console.BackgroundColor = System.ConsoleColor.Blue;
+                        System.Console.ForegroundColor = System.ConsoleColor.White;
                         System.Console.WriteLine("RedirectURL: " + Configuration["AzureAd:WebAppURI"] + Configuration["AzureAd:CallbackPath"]);
+                        System.Console.ResetColor();
                     }
                 };
 
@@ -63,7 +66,10 @@ namespace WebApp_OpenIDConnect_DotNet
                     if (Configuration["AzureAd:WebAppURI"] != null)
                     {
                         context.ProtocolMessage.PostLogoutRedirectUri = Configuration["AzureAd:WebAppURI"] + Configuration["AzureAd:SignedOutCallbackPath"];
+                        System.Console.BackgroundColor = System.ConsoleColor.Red;
+                        System.Console.ForegroundColor = System.ConsoleColor.White;
                         System.Console.WriteLine("PostLogoutRedirectURL: " + Configuration["AzureAd:WebAppURI"] + Configuration["AzureAd:SignedOutCallbackPath"]);
+                        System.Console.ResetColor();
                     }
                 };
             });
