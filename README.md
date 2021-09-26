@@ -31,7 +31,7 @@ Please refer back to the official Microsoft [azure-samples](https://github.com/A
 
 ## About the code
 
-- Added the API to my registered app
+- Add the **API permissions** for your registered app
     ![Update the target framework](ReadmeFiles/2.png)
 
 - From `Startup.cs` we will update the configure to implement `OpenIdConnectOptions`:
